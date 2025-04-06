@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyfall Mission — Photos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: hwb(187 38% 33%);
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: auto;
+            height: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            display: block;
+            margin: 50px auto;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galerie photos — Skyfall Mission</h1>
+    <div class="gallery">
+        <img src="images/482052894_649446827668745_6269747660238758248_n_preview_rev_1.png" alt="Photo 1" onclick="openModal(this.src)">
+        <img src="imgaes/cansat4_preview_rev_1.png" alt="Photo 2" onclick="openModal(this.src)">
+        <img src="images/WhatsApp%20Image%202025-03-20%20at%2022.47.48_b36bb0e0.jpg" alt="Équipe" onclick="openModal(this.src)">
+        <!-- Ajoute d’autres images ici -->
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" class="modal-content">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Skyfall Mission — Projet CanSat</p>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
+</body>
+</html>

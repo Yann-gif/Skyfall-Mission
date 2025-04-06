@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Mission - Skyfall Mission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dd8fd7;
+            color: #333;
+        }
+        header {
+            background-color: hwb(296 45% 17%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            z-index: 1;
+            animation: parallax 10s infinite alternate;
+        }
+        header h1, header .subtitle {
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            font-family: 'Emblema One', monospace;
+            font-size: 10rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 0; /* Marge à droite du titre */
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            margin: 5px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+            text-align: center;
+        }
+        section p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        h2 {
+            color: hsl(258, 100%, 50%);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes parallax {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-20%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NOTRE MISSION</h1>
+    <p class="subtitle">Skyfall Mission - Projet CanSat 2025</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+</header>
+
+
+<section>
+    <h2>Mission principale</h2>
+    <p>Notre mission principale est obligatoire et consiste à enregistrer des données atmosphériques telles que la température, la pression, etc. Ensuite, nous transmettrons ces données en temps réel à une station au sol, afin de pouvoir les récupérer même si notre CanSat venait à être perdu.</p>
+</section>
+
+<section>
+    <h2>Mission secondaire</h2>
+    <p>Notre mission secondaire sera la suivante : nous allons concevoir un système permettant au CanSat de se redresser automatiquement après son atterrissage, peu importe la position dans laquelle il se pose.</p>
+    <p>Une fois au sol, notre CanSat utilisera des capteurs pour déterminer sa position par rapport à la surface et calculera comment positionner ses pattes pour se redresser verticalement. Il déploiera ensuite ses pattes selon les angles calculés précédemment.</p>
+    <p>Ce projet se distingue par sa structure unique équipée de pattes déployables permettant au CanSat de se repositionner à la verticale après son atterrissage. L’algorithme intégré analyse la position précise du CanSat et calcule les angles exacts nécessaires au déploiement de chaque patte, garantissant un redressement optimal.</p>
+    <p>Notre mission secondaire vise à proposer une solution pour les rovers incapables de se redresser après un atterrissage raté sur une planète ou un astéroïde.</p>
+    <p>Cette mission secondaire répond notamment au problème rencontré par la sonde japonaise SLIM. Bien que SLIM ait réussi à se poser à seulement 10 mètres de sa cible, l’atterrissage a échoué, le rover s’étant renversé sur le nez, rendant ses panneaux solaires inutilisables. Nous avons trouvé cela regrettable, d’autant plus que SLIM avait atteint sa cible avec grande précision. Nous avons donc eu l’idée innovante de créer un système capable de se redresser de manière autonome après un atterrissage, afin d’éviter ce genre de problèmes évitables.</p>
+    <p>Après l’atterrissage, notre CanSat analysera ses données d’inclinaison pour vérifier s’il a bien réussi à se repositionner. L’algorithme utilisé pour le redressement consignera également les angles et ajustements effectués, afin d’évaluer l’efficacité et la fiabilité du mécanisme.</p>
+    <p>Nous pensons que cette idée est intéressante, réaliste et réalisable, et qu’elle présente une vraie valeur scientifique, en répondant à des problèmes concrets rencontrés dans l’exploration spatiale.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Projet CanSat : Skyfall Mission. Tous droits réservés.</p>
+</footer>
+
+<script>
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function activateAnimations() {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (isElementInViewport(section)) {
+                section.style.opacity = 1;
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', activateAnimations);
+    window.addEventListener('load', activateAnimations);
+</script>
+
+</body>
+</html>

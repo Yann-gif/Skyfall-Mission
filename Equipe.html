@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équipe - Skyfall Mission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dd8fd7;
+            color: #333;
+        }
+        header {
+            background-color: hwb(296 45% 17%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            z-index: 1;
+            animation: parallax 10s infinite alternate;
+        }
+        header h1, header .subtitle {
+            position: relative;
+            z-index: 2;
+        }
+        .subtitle {
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            padding: 10px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgb(251, 250, 252);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+        section p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: hsl(258, 100%, 50%);
+            text-align: center;
+        }
+        a {
+            color: hsl(258, 100%, 50%);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: hsl(258, 100%, 50%);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px auto;
+            display: block;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: hsl(258, 100%, 40%);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes parallax {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-20%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SKYFALL MISSION</h1>
+        <p class="subtitle">Projet CanSat 2025</p>
+        <p class="subtitle">Découvrez notre équipe</p>
+    </header>
+
+    <section>
+        <h2>Notre Équipe</h2>
+        <p>Nous sommes une équipe passionnée d'étudiants en sciences et ingénierie, déterminés à repousser les limites de l'innovation.</p>
+    </section>
+
+    <section>
+        <h2>Présentation de l'équipe</h2>
+        <p><strong>Yosha :</strong><br>
+        J’ai choisi l’option mathématiques et sciences à l’école, ce qui me donne 7 heures de sciences et 6 heures de mathématiques par semaine. En plus, je suis un cours de mathématiques de 4 heures à l’ULB chaque samedi matin. Passionné par l’ingénierie, j’ai construit mon propre ordinateur, un simulateur de Formule 1 en tubes PVC reproduisant parfaitement la position d’un pilote, et un simulateur de vol inspiré de la posture des pilotes de F-16. Cet été, j’ai participé à un programme d’été à la faculté d’ingénierie de l’université de Toronto. <br>
+        Dans le cadre du projet CanSat, je me concentre principalement sur la partie matérielle, notamment la conception électronique et la modélisation 3D, tout en contribuant au logiciel et à la mécanique.</p>
+        <img src="images/Yosha_preview_rev_1.png" alt="Photo de Cansat  " style="width:100%; max-width:600px; border-radius: 10px; margin-top: 15px;">
+
+        <p><strong>Gypsie :</strong><br>
+        J’ai choisi les options art, histoire de l’art et infographie. L’été dernier, je suis partie à Oxford pour un cours de langue organisé par EF. Cela m’a permis d’améliorer mon anglais et d’atteindre un niveau C1. Pendant le programme, j’ai logé dans une famille d’accueil. <br>
+        Dans le projet CanSat, j’aime particulièrement travailler en équipe et apprendre de nouvelles compétences. Je m’occupe des réseaux sociaux, de la communication et du design matériel et électronique.</p>
+
+        <p><strong>Yann :</strong><br>
+        J’ai également choisi l’option mathématiques et sciences, par intérêt pour ces matières. À côté de mes études, je pratique le piano, l’athlétisme et le théâtre. Je participe aussi à des activités mathématiques supplémentaires comme Imath. <br>
+        J’ai rejoint le projet CanSat car il regroupe mes centres d’intérêt dans un cadre concret et motivant.</p>
+        <img src="images/yann_preview_rev_1.png" alt="Photo de Cansat  " style="width:100%; max-width:600px; border-radius: 10px; margin-top: 15px;">
+
+        <p><strong>Sam :</strong><br>
+        J’ai aussi choisi l’option mathématiques et sciences. Par ailleurs, je suis des cours de théâtre à l’école et je prépare l’examen d’entrée en médecine. Mon emploi du temps m’a appris l’organisation, la rigueur et la gestion du stress. <br>
+        Je participe au projet CanSat pour cette expérience unique d’apprentissage et de travail d’équipe.</p>
+
+        <p><strong>Oscar :</strong><br>
+        J’ai choisi mathématiques et sciences. Pendant plusieurs années, j’ai participé à des cours de robotique à la Scientothèque (ULB) où j’ai découvert le projet CanSat. Je suis aussi passionné de dessin et de musique. <br>
+        Je participe au CanSat pour développer mes compétences en programmation et vivre une aventure collective enrichissante.</p>
+
+        <p><strong>Kian :</strong><br>
+        J’ai choisi mathématiques et sciences, avec des options sport et grec. Je pratique l’escrime à haut niveau et cela m’a appris l’organisation et la gestion du temps. <br>
+        Dans le projet CanSat, je m’occupe du parachute et je contribue à l’antenne Yagi et à la communication vidéo.</p>
+    </section>
+
+    <section>
+        <a href="index.html"><button>Retour à l'accueil</button></a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Projet CanSat : Skyfall Mission. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function activateAnimations() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (isElementInViewport(section)) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', activateAnimations);
+        window.addEventListener('load', activateAnimations);
+    </script>
+</body>
+</html>
